@@ -1,0 +1,19 @@
+<script>
+    
+//Montly payment = interest rate/12 months * amount owed / (1-(1+ interest rate/12 months)^-number of months
+    
+   monthlyLoanPayment = function () 
+   {
+   var loan = prompt("How much money are you lending?");
+   var interestRate = prompt("What will your interest rate be on your car loan in decimal form?"); 
+   var months = prompt("How many months will you take to pay off your loan?");
+   var interestMonth = interestRate / 12;
+   var numerator = interestMonth * loan;
+   var t1 = (1 + interestMonth);
+   var exponent = Math.pow(t1, months);
+   var denominator = 1 - (1 / exponent);
+   console.log("Your monthly payment is " + (numerator / denominator));
+   }
+    monthlyLoanPayment()
+    
+</script>
