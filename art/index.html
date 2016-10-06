@@ -1,0 +1,73 @@
+<html>
+<head></head>
+<body>
+Here's my recreation of Rity Jansen Heijtmajer's geometric paiting!
+    <canvas id = "myCanvas" width = "600" height = "600"></canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var height = document.getElementById("myCanvas").height;
+    var width = document.getElementById("myCanvas").width;
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#e99800";
+    ctx.fillRect(0,0,width*0.5,height*0.5);
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#e07e00";
+    ctx.fillRect(width*0.5,0,width*0.5,height*0.5);
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#e1c001";
+    ctx.fillRect(0,width*0.5,width*0.5,height*0.5);
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#ddd40d";
+    ctx.fillRect(width*0.5,width*0.5,height*0.5,height*0.5);
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(0,height*0.5);
+    ctx.lineTo(width*0.5,height*0.5);
+    ctx.lineTo(0,height*0.425);
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(width*0.5,height*0.5);
+    ctx.lineTo(width,height*0.5);
+    ctx.lineTo(width,height*0.575);
+    ctx.fill();
+    ctx.fillStyle = "black";
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(width*0.5,height*0.5);
+    ctx.lineTo(width*0.5,0);
+    ctx.lineTo(height*0.575,0);
+    ctx.fill();
+    ctx.fillStyle = "black";
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(width*0.5,height*0.5);
+    ctx.lineTo(width*0.5,height);
+    ctx.lineTo(width*0.425,height);
+    ctx.fill();
+    ctx.fillStyle = "black";
+    ctx.closePath();
+    
+    
+    
+    
+</script>
+</body>
+</html>
