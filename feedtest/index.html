@@ -1,0 +1,116 @@
+<html>
+<head>
+<style>
+    h3 {
+       font-family: "Raleway", Georgia, Serif;
+       color: rgb(234, 4, 100);
+       padding: 20px 20px 20px 20px;
+    }
+    p {
+      font-family: "Raleway", Georgia, Serif;
+      color: rgb(234, 4, 100);
+    }
+    div:hover {
+      background-color: #ffcce0;
+    }
+    p {
+    outline-style: inset;
+    color: rgb(234, 4, 100);
+}
+    body {
+    background-color: #fceff5;
+}
+    p {
+    -moz-text-decoration-style: wavy; /* Code for Firefox */
+    text-decoration: underline;
+        padding: 20px 20px 20px 20px;
+    }
+        
+        #headlinePicture 
+        
+        {
+            height: 300px;
+            border-style: inset;
+            border-color: rgb(234, 4, 100);
+            margin-left: 400px;
+            margin-top: 20px;
+        }
+        
+    
+    <!-- Make the picture smaller and format it to be on the right side -->  
+    
+</style>    
+</head>
+<body>
+
+    
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+
+    
+    <img src = "politics.jpg" id = "headlinePicture">
+    
+<script type="text/javascript">
+    
+    
+
+    
+//RSS is stuff (really simple syndication)   
+//Here's a function to get RSS information
+//input parameter: url = url of the rss feed you want
+function getRSSFeed(url) {
+	var rssurl = encodeURIComponent(url);
+	var baseurl = "http://codeghs.com/scripts/rss.php?feedurl=" + rssurl;
+	$.ajax({
+		url: baseurl,
+		type: 'GET',
+		success: function(data){
+			generatePageData($.parseJSON(data).item);
+		}
+
+	});
+}
+    //create the page
+    //parameter page data is an array of items
+    function generatePageData(pageData){
+        for(var i = 0; i < pageData.length; i++) {
+            var item = pageData[i];
+            var itemTitle = item.title;
+            var itemDescription = item.description;
+            var itemLink = item.link
+            //attach item title and description to body
+            
+            //create element
+            var contentBox = document.createElement('div');
+            var title = document.createElement('h3');
+            var text = document.createElement('p');
+            var link = document.createElement('a');
+                                   
+            //put stuff into element
+            $(link).append(title);
+            $(link).attr('href', itemLink);
+            $(link).attr('target', '_blank');
+            $(title).append(itemTitle);
+            $(text).append(itemDescription);
+            $(contentBox).append(link);
+            $(contentBox).append(text);
+            
+            //put element on page
+            $('body').append(contentBox);
+            
+            
+
+            
+        
+        
+        }
+    
+    
+    }
+    
+    
+getRSSFeed("http://rss.cnn.com/rss/cnn_topstories.rss");
+    
+</script>
+</body>
+</html>
