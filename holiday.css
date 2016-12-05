@@ -1,0 +1,60 @@
+body {
+	background-image: url('candybackground.jpg');
+}
+#photoWrapper {
+	width: 50%;
+	margin-left: 25%;
+}
+#thePhoto {
+	width: 100%;
+}
+#forwardBtn {
+	position: relative;
+	float: right;
+}
+button {
+	background: #f6b1c3;
+	color: #BC0D35;
+   padding: 5px 5px 5px 5px;
+}
+.centerMe{
+	text-align: center;
+    color: #a20d1e;
+    font-size: 30px;
+}
+
+.pageWrapper{
+    width: 70%;
+    margin-left: 13.5%;
+    padding: 20px 20px 20px 20px;
+    background-color: #ecc8c8; /*USE THIS AS COLOR BASIS*/ 
+    }
+
+
+h1.centerMe {
+    font-family: 'Kalam', cursive;
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Kalam', cursive;
+}
+
+#thePhoto {
+border-style: inset outset outset inset;
+border-width: 5px;
+border-color: #f0788c;
+}
+
+#chart_div{
+    margin-left: 25%;
+}
+
+
+/*
+analogous: equidistant from each other
+monochromatic: different hues of same color
+triad: evenly spaced colors on wheel 
+complementary: 180 degrees apart from each other (colors that go well with each other
+shades: different shades of same colors
+*/
