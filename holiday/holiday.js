@@ -1,3 +1,4 @@
+//HINT: Click on the title for a secret message
 var imageArray = [
 	
     "sweater.jpg", "couch.jpg", "dogandme.jpg", "dog.jpg", "sweaterbuddies.jpg"
